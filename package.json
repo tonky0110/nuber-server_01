@@ -6,6 +6,15 @@
 	"repository": "https://github.com/tonky0110/nuber-server.git",
 	"author": "tonky0110",
 	"license": "MIT",
+	"scripts": {
+		"dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"graphql-yoga": "^1.18.1",
+		"helmet": "^3.20.0",
+		"morgan": "^1.9.1"
+	},
 	"devDependencies": {
 		"@types/node": "^10.5.0",
 		"nodemon": "^1.17.5",
