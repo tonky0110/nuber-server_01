@@ -1,0 +1,8 @@
+type StartPhoneVerificationResponse {
+	ok: Boolean!
+	error: String
+}
+
+type Mutaion {
+	StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse!
+}
