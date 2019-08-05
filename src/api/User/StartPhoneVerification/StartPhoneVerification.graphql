@@ -3,6 +3,6 @@ type StartPhoneVerificationResponse {
 	error: String
 }
 
-type Mutaion {
+type Mutation {
 	StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse!
 }

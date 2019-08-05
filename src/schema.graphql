@@ -53,6 +53,7 @@ type EmailSignInResponse {
 type Mutation {
   EmailSignIn(email: String!, password: String!): EmailSignInResponse!
   FacebookConnect(firstName: String!, lastName: String!, email: String, fbId: String!): FacebookConnectResponse!
+  StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse!
 }
 
 type FacebookConnectResponse {
@@ -97,16 +98,11 @@ type StartPhoneVerificationResponse {
   error: String
 }
 
-type Mutaion {
-  StartPhoneVerification(phoneNumber: String!): StartPhoneVerificationResponse!
-}
-
 type Verification {
   id: Int!
   target: String!
   payload: String!
   key: String!
-  used: Boolean!
   createdAt: String!
   updatedAt: String
 }

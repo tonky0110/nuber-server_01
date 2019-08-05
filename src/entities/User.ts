@@ -12,7 +12,6 @@ import {
 	OneToMany,
 	ManyToOne
 } from 'typeorm';
-import Verification from './Verification';
 import Ride from './Ride';
 import Chat from './Chat';
 import Message from './Message';
