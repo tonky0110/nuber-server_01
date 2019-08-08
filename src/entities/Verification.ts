@@ -5,11 +5,9 @@ import {
 	CreateDateColumn,
 	Entity,
 	PrimaryGeneratedColumn,
-	UpdateDateColumn,
-	ManyToOne
+	UpdateDateColumn
 } from 'typeorm';
 import { verificationTarget } from '../types/types';
-import User from './User';
 
 const PHONE = 'PHONE';
 const EMAIL = 'EMAIL';
