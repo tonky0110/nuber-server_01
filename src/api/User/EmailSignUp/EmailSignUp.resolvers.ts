@@ -1,6 +1,7 @@
 import User from '../../../entities/User';
 import { EmailSignUpMutationArgs, EmailSignUpResponse } from '../../../types/graph';
 import { Resolvers } from '../../../types/resolvers';
+import createJWT from '../../../utils/crateJWT';
 
 const resolvers: Resolvers = {
 	Mutation: {
@@ -16,10 +17,11 @@ const resolvers: Resolvers = {
 					};
 				} else {
 					const newUser = await User.create({ ...args }).save();
+					const token = createJWT(newUser.id);
 					return {
 						ok: true,
 						error: null,
-						token: 'Coming soon'
+						token
 					};
 				}
 			} catch (error) {
