@@ -4,6 +4,12 @@ import User from '../../../entities/User';
 import createJWT from '../../../utils/crateJWT';
 
 const resolvers: Resolvers = {
+	Query: {
+		user: (parent, args, context) => {
+			console.log(context.req.user);
+			return '';
+		}
+	},
 	Mutation: {
 		FacebookConnect: async (_, args: FacebookConnectMutationArgs): Promise<FacebookConnectResponse> => {
 			const { fbId } = args;
