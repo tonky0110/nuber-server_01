@@ -15,14 +15,14 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 ---
 
 ### Authentication:
-- [ ] Generate JWT
-- [ ] Verifiy JWT
+- [x] Generate JWT
+- [x] Verifiy JWT
 
 ---
 
 ### Private Resolvers:
-- [ ] Verify Email
 - [ ] Get my Profile
+- [ ] Verify Email
 - [ ] Update my Profile
 - [ ] Toggle Driving Mode
 
