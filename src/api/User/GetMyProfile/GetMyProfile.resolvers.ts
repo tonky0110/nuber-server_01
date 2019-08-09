@@ -1,16 +1,16 @@
 import { Resolvers } from 'src/types/resolvers';
-import { GetMyProfileResponse } from 'src/types/graph';
+import privateResolver from '../../../utils/privateResolver';
 
 const resolvers: Resolvers = {
-	Mutation: {
-		GetMyProfile: async (_, args, { req }): Promise<GetMyProfileResponse> => {
+	Query: {
+		GetMyProfile: privateResolver(async (_, __, { req }) => {
 			const { user } = req;
 			return {
 				ok: true,
 				error: null,
 				user
 			};
-		}
+		})
 	}
 };
 export default resolvers;
